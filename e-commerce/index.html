@@ -1,35 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Electronico</title>
+    <title>Tienda de Tecnología</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
-        <nav class="header__navegacion">
-            <ul class="header__lista-elementos">
-                <li class="header__item-header">
-                    <a href="#" class="header__link">Inicio</a>
+        <img class="header__logo" src="img/pngtree-technology-symbol-abstract-logo-illustrator-png-image_8826518.png" alt="Logo de la tienda">
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">Inicio</a>
                 </li>
-                <li class="header__item-header">
-                    <a href="#" class="header__link">Celulares</a>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">Productos</a>
                 </li>
-                <li class="header__item-header">
-                    <a href="#" class="header__link">Computadores</a>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">Categorías</a>
                 </li>
-                <li class="header__item-header">
-                    <a href="#" class="header__link">Smart Watch</a>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">Servicios</a>
                 </li>
-                <li class="header__item-header">
-                    <a href="#" class="header__link">Mas dispositivos</a>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">Contacto</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main>
 
+    <main class="main">
+        <section class="main__banner banner">
+            <div class="banner__content">
+                <h1 class="banner__title">Tecnología a tu Alcance</h1>
+                <p class="banner__subtitle">Descubre las últimas novedades y ofertas exclusivas.</p>
+            </div>
+        </section>
+
+        <div class="main__container">
+
+            <section class="main__products products">
+                <h2 class="main__section-title">Nuestros Productos</h2>
+                <div class="products__layout">
+                    <article class="products__card">
+                        <img src="img/20211018_1102470.webp" alt="Laptop" class="products__card-image">
+                        <div class="products__card-info">
+                            <h3 class="products__card-name">Laptop Pro X1</h3>
+                            <p class="products__card-price">$1,199.99</p>
+                        </div>
+                    </article>
+                    <article class="products__card">
+                        <img src="img/OIP.jpeg" alt="Smartphone" class="products__card-image">
+                        <div class="products__card-info">
+                            <h3 class="products__card-name">Smartphone Galaxy Z</h3>
+                            <p class="products__card-price">$899.99</p>
+                        </div>
+                    </article>
+                    <article class="products__card">
+                        <img src="img/OIP (1).jpeg" alt="Audífonos" class="products__card-image">
+                        <div class="products__card-info">
+                            <h3 class="products__card-name">Audífonos Inalámbricos</h3>
+                            <p class="products__card-price">$149.99</p>
+                        </div>
+                    </article>
+                    <article class="products__card">
+                        <img src="img/OIP (2).jpeg" alt="Smartwatch" class="products__card-image">
+                        <div class="products__card-info">
+                            <h3 class="products__card-name">Smartwatch Fit 2</h3>
+                            <p class="products__card-price">$249.99</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="main__categories categories">
+                <h2 class="main__section-title">Explora por Categoría</h2>
+                <div class="categories__layout">
+                    <a href="#" class="categories__card">
+                        <img src="img/newsroom-intel-13th-gen-hx-processors-1.jpg" alt="Computadoras" class="categories__card-image">
+                        <h3 class="categories__card-name">Computadoras</h3>
+                    </a>
+                    <a href="#" class="categories__card">
+                        <img src="img/mejores-moviles-Antutu.jpg" alt="Móviles" class="categories__card-image">
+                        <h3 class="categories__card-name">Móviles</h3>
+                    </a>
+                    <a href="#" class="categories__card">
+                        <img src="img/sonido-audio-musica.webp" alt="Audio" class="categories__card-image">
+                        <h3 class="categories__card-name">Audio</h3>
+                    </a>
+                    <a href="#" class="categories__card">
+                        <img src="img/OIP (4).jpeg" alt="Accesorios" class="categories__card-image">
+                        <h3 class="categories__card-name">Accesorios</h3>
+                    </a>
+                </div>
+            </section>
+
+        </div>
     </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">&copy; 2025 Tienda de Tecnología. Todos los derechos reservados.</p>
+            <div class="footer__links">
+                <a href="#" class="footer__link">Contacto</a>
+                <a href="#" class="footer__link">Política de Privacidad</a>
+                <a href="#" class="footer__link">Instagram</a>
+                <a href="#" class="footer__link">Twitter</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

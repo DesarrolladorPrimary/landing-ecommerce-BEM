@@ -1,27 +1,242 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+/*
+====================================================
+  E-COMMERCE LANDING - ESTILOS PRINCIPALES (BEM)
+====================================================
+
+
+/* ================= RESET Y REGLAS GENERALES ================= */
+* { /* Reset universal */
+    padding: 0; /* Elimina padding por defecto */
+    margin: 0;  /* Elimina margen por defecto */
+    box-sizing: border-box; /* Incluye borde y padding en el tamaño */
 }
 
-
-.header {
-    text-align: end;
-    background-color: rgb(139, 149, 158);
-    height: 80px;
+/* ================= HEADER ================= */
+.header { /* Barra superior fija */
+    background-color: #5b9cd5; /* Azul tecnológico */
+    height: 80px; /* Altura del header */
+    min-width: 320px; /* Ancho mínimo */
+    position: fixed; /* Fijo arriba */
+    border: 1px solid black; /* Borde negro */
+    width: 100%; /* Ocupa todo el ancho */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
-
-.header__item-header {
-    list-style: none;
-    margin: 10px;
-    display: inline-block;
+.header__logo { /* Logo a la izquierda */
+    width: 60px; /* Ancho del logo */
+    height: 50px; /* Alto del logo */
+    display: inline-block; /* En línea */
+    position: relative; /* Para ajustar posición */
+    bottom: 20px; /* Sube el logo */
+    left: 50px; /* Separa del borde izquierdo */
 }
 
-.header__link {
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
+.header__nav { /* Contenedor de navegación */
+    height: 80px; /* Igual que header */
+    display: inline-block; /* En línea */
+    position: relative; /* Para mover a la derecha */
+    left: 400px; /* Empuja la nav a la derecha */
 }
 
+.header__nav-list { /* Lista de links */
+    float: right; /* A la derecha */
+    height: 80px; /* Igual que header */
+    display: block; /* Bloque vertical */
+    padding-right: 40px; /* Espacio derecho */
+    padding-top: 25px; /* Centra verticalmente */
+}
 
+.header__nav-item { /* Ítem del menú */
+    list-style: none; /* Sin viñeta */
+    margin: 0 25px; /* Espaciado entre links */
+    display: inline-block; /* En línea */
+}
+
+.header__nav-link { /* Link del menú */
+    font-weight: bold; /* Negrita */
+    text-decoration: none; /* Sin subrayado */
+    color: #222; /* Gris oscuro */
+    font-size: 18px; /* Tamaño base */
+    letter-spacing: 1px; /* Espaciado letras */
+    transition: color 0.2s, font-size 0.2s; /* Animación */
+}
+
+.header__nav-link:hover { /* Hover link */
+    color: #fff; /* Blanco */
+    font-size: 20px; /* Más grande */
+}
+
+/* ================= BANNER ================= */
+.banner { /* Banner principal */
+    height: 45vh; /* Altura relativa */
+    min-height: 350px; /* Altura mínima */
+    background-color: #5b9cd5; /* Azul igual header */
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Centrado */
+    padding: 80px 20px 0 20px; /* Espaciado interno */
+}
+
+.banner__content { /* Contenedor texto banner */
+    max-width: 800px; /* Máximo ancho */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+.banner__title { /* Título banner */
+    margin-top: 50px; /* Separación arriba */
+    font-size: 3.2rem; /* Tamaño grande */
+    margin-bottom: 10px; /* Separación abajo */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.25); /* Sombra */
+}
+
+.banner__subtitle { /* Subtítulo banner */
+    font-size: 1.6rem; /* Tamaño */
+    font-weight: 300; /* Delgado */
+}
+
+/* ================= MAIN Y CONTENEDORES ================= */
+.main { /* Main general */
+    padding-top: 90px; /* Espacio para header fijo */
+}
+
+.main__container { /* Contenedor central */
+    padding: 50px 20px; /* Espaciado interno */
+    max-width: 1200px; /* Máximo ancho */
+    margin: 0 auto; /* Centrado */
+}
+
+.main__section-title { /* Título de sección */
+    text-align: center; /* Centrado */
+    font-size: 2.5rem; /* Tamaño */
+    margin-bottom: 40px; /* Espacio abajo */
+    color: #222; /* Gris oscuro */
+    font-weight: 600; /* Negrita */
+}
+
+/* ================= PRODUCTS ================= */
+.products__layout { /* Fila de productos */
+    text-align: center; /* Centrado horizontal */
+    font-size: 0; /* Elimina espacio entre inline-blocks */
+}
+
+.products__card { /* Tarjeta producto */
+    display: inline-block; /* En línea */
+    width: 23%; /* 4 por fila */
+    margin: 0 1% 20px 1%; /* Espaciado */
+    vertical-align: top; /* Arriba */
+    background: #fff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra */
+    overflow: hidden; /* Oculta desborde */
+    text-align: center; /* Centrado */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animación */
+    font-size: 16px; /* Restaura tamaño texto */
+}
+
+.products__card:hover { /* Hover tarjeta */
+    transform: translateY(-5px); /* Sube */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Más sombra */
+}
+
+.products__card-image { /* Imagen producto */
+    width: 100%; /* Ocupa todo el ancho */
+    height: 200px; /* Alto fijo */
+    object-fit: contain; /* Sin deformar */
+}
+
+.products__card-info { /* Info producto */
+    padding: 20px; /* Espaciado interno */
+}
+
+.products__card-name { /* Nombre producto */
+    font-size: 1.2rem; /* Tamaño */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 10px; /* Espacio abajo */
+}
+
+.products__card-price { /* Precio producto */
+    font-size: 1.1rem; /* Tamaño */
+    color: #5b9cd5; /* Azul */
+    font-weight: bold; /* Negrita */
+}
+
+/* ================= CATEGORIES ================= */
+.categories__layout { /* Fila de categorías */
+    text-align: center; /* Centrado */
+    font-size: 0; /* Elimina espacio entre inline-blocks */
+}
+
+.categories__card { /* Tarjeta categoría */
+    display: inline-block; /* En línea */
+    width: 23%; /* 4 por fila */
+    margin: 0 1%; /* Espaciado */
+    position: relative; /* Para nombre absoluto */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta desborde */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra */
+    transition: transform 0.3s; /* Animación */
+    height: 250px; /* Alto fijo */
+    vertical-align: top; /* Arriba */
+    font-size: 16px; /* Restaura tamaño texto */
+}
+
+.categories__card:hover { /* Hover tarjeta */
+    transform: scale(1.05); /* Agranda */
+}
+
+.categories__card-image { /* Imagen categoría */
+    width: 100%; /* Todo el ancho */
+    height: 100%; /* Todo el alto */
+    object-fit: cover; /* Cubre sin deformar */
+    filter: brightness(0.7); /* Oscurece */
+    transition: filter 0.3s; /* Animación */
+}
+
+.categories__card:hover .categories__card-image { /* Hover imagen */
+    filter: brightness(0.9); /* Aclara */
+}
+
+.categories__card-name { /* Nombre categoría */
+    position: absolute; /* Sobre la imagen */
+    bottom: 20px; /* Desde abajo */
+    left: 20px; /* Desde la izquierda */
+    right: 20px; /* Desde la derecha */
+    color: #fff; /* Blanco */
+    font-size: 1.5rem; /* Tamaño */
+    font-weight: bold; /* Negrita */
+}
+
+/* ================= FOOTER ================= */
+.footer { /* Pie de página */
+    background-color: #1a237e; /* Azul oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 30px 0 20px 0; /* Espaciado vertical */
+    text-align: center; /* Centrado */
+    margin-top: 40px; /* Separación del contenido */
+}
+
+.footer__container { /* Contenedor interno */
+    max-width: 900px; /* Máximo ancho */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+.footer__text { /* Texto de derechos */
+    margin-bottom: 15px; /* Espacio abajo */
+    font-size: 1rem; /* Tamaño base */
+}
+
+.footer__links { /* Contenedor de enlaces */
+    margin-bottom: 5px; /* Espacio abajo */
+}
+
+.footer__link { /* Enlace del footer */
+    color: #90caf9; /* Azul claro */
+    text-decoration: none; /* Sin subrayado */
+    margin: 0 12px; /* Espaciado horizontal */
+    font-size: 1rem; /* Tamaño base */
+    transition: color 0.2s; /* Animación color */
+}
+
+.footer__link:hover { /* Hover enlace */
+    color: #fff; /* Blanco */
+    text-decoration: underline; /* Subrayado al pasar */
+}
