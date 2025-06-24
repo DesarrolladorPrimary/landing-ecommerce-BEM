@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.header {
+    text-align: end;
+    background-color: rgb(139, 149, 158);
+    height: 80px;
+}
+
+
+.header__item-header {
+    list-style: none;
+    margin: 10px;
+    display: inline-block;
+}
+
+.header__link {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+
