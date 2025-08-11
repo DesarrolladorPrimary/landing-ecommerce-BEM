@@ -28,36 +28,34 @@
     border: 1px solid black; /* Borde negro */
     width: 100%; /* Ocupa todo el ancho */
     border-radius: var(--border-radius); /* Bordes redondeados */
+
+        /* NUEVO: Flexbox para alinear logo y navegación */
+    display: flex; /* Activamos flexbox */
+    align-items: center; /* Centramos verticalmente */
+    justify-content: space-between; /* Espaciado entre logo y nav */
+    padding: 0 50px; /* Margen interno horizontal */
 }
 
 .header__logo { /* Logo a la izquierda */
     width: 60px; /* Ancho del logo */
     height: 50px; /* Alto del logo */
-    display: inline-block; /* En línea */
-    position: relative; /* Para ajustar posición */
-    bottom: 20px; /* Sube el logo */
-    left: 50px; /* Separa del borde izquierdo */
+    display: block; /* Eliminamos inline-block ya que flexbox lo alinea */
 }
 
 .header__nav { /* Contenedor de navegación */
-    height: 80px; /* Igual que header */
-    display: inline-block; /* En línea */
-    position: relative; /* Para mover a la derecha */
-    left: 400px; /* Empuja la nav a la derecha */
+     /* Con flexbox no necesitamos left: 400px */
+    position: relative;
 }
 
 .header__nav-list { /* Lista de links */
-    float: right; /* A la derecha */
-    height: 80px; /* Igual que header */
-    display: block; /* Bloque vertical */
-    padding-right: 40px; /* Espacio derecho */
-    padding-top: 25px; /* Centra verticalmente */
+   /* NUEVO: Flex para lista horizontal */
+    display: flex;
+    gap: 25px; /* Espacio entre ítems */
+    align-items: center;
 }
 
 .header__nav-item { /* Ítem del menú */
-    list-style: none; /* Sin viñeta */
-    margin: 0 25px; /* Espaciado entre links */
-    display: inline-block; /* En línea */
+    list-style: none;
 }
 
 .header__nav-link { /* Link del menú */
