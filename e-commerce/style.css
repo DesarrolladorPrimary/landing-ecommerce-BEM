@@ -1,8 +1,5 @@
-/*
-====================================================
-  E-COMMERCE LANDING - ESTILOS PRINCIPALES (BEM)
-====================================================
-*/
+/*ACTUALIZACION CODIGO A FLEXBOX*/
+
 
 :root {
     --color-primary: #5b9cd5;      /* Azul principal */
@@ -251,3 +248,4 @@
     color: var(--color-white); /* Blanco */
     text-decoration: underline; /* Subrayado al pasar */
 }
+
