@@ -73,17 +73,21 @@
 
 /* ================= BANNER ================= */
 .banner { /* Banner principal */
-    height: 45vh; /* Altura relativa */
-    min-height: 350px; /* Altura mínima */
-    background-color: var(--color-primary); /* Azul igual header */
-    color: var(--color-white); /* Texto blanco */
-    text-align: center; /* Centrado */
-    padding: 80px 20px 0 20px; /* Espaciado interno */
+    height: 45vh;
+    min-height: 350px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    /* Cambio: uso Flexbox para centrar contenido vertical y horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
 .banner__content { /* Contenedor texto banner */
     max-width: 800px; /* Máximo ancho */
-    margin: 0 auto; /* Centrado horizontal */
 }
 
 .banner__title { /* Título banner */
@@ -118,23 +122,26 @@
 }
 
 /* ================= PRODUCTS ================= */
-.products__layout { /* Fila de productos */
-    text-align: center; /* Centrado horizontal */
-    font-size: 0; /* Elimina espacio entre inline-blocks */
+.products__layout { 
+        /* Cambio: de inline-block a flexbox con wrap.
+       - flex-wrap permite que las tarjetas bajen a la siguiente línea en pantallas pequeñas.
+    */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .products__card { /* Tarjeta producto */
-    display: inline-block; /* En línea */
-    width: 23%; /* 4 por fila */
-    margin: 0 1% 20px 1%; /* Espaciado */
-    vertical-align: top; /* Arriba */
-    background: var(--color-white); /* Fondo blanco */
-    border-radius: var(--border-radius); /* Bordes redondeados */
-    box-shadow: var(--shadow); /* Sombra */
-    overflow: hidden; /* Oculta desborde */
-    text-align: center; /* Centrado */
-    transition: transform 0.3s, box-shadow 0.3s; /* Animación */
-    font-size: 16px; /* Restaura tamaño texto */
+   /* flex: crecimiento, encogimiento y ancho base */
+    flex: 1 1 calc(25% - 20px); /* 4 por fila */
+    max-width: 23%; 
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .products__card:hover { /* Hover tarjeta */
@@ -166,22 +173,24 @@
 
 /* ================= CATEGORIES ================= */
 .categories__layout { /* Fila de categorías */
-    text-align: center; /* Centrado */
-    font-size: 0; /* Elimina espacio entre inline-blocks */
+   /* Cambio: de inline-block a flexbox */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .categories__card { /* Tarjeta categoría */
-    display: inline-block; /* En línea */
-    width: 23%; /* 4 por fila */
-    margin: 0 1%; /* Espaciado */
-    position: relative; /* Para nombre absoluto */
-    border-radius: var(--border-radius); /* Bordes redondeados */
-    overflow: hidden; /* Oculta desborde */
-    box-shadow: var(--shadow); /* Sombra */
-    transition: transform 0.3s; /* Animación */
-    height: 250px; /* Alto fijo */
-    vertical-align: top; /* Arriba */
-    font-size: 16px; /* Restaura tamaño texto */
+   flex: 1 1 calc(25% - 20px); /* Uso de Flexbox: ocupa aproximadamente 25% del ancho,
+    menos 20px de espacio, permitiendo que el tamaño se ajuste de forma flexible */
+   max-width: 23%; /* Limita el ancho máximo para mantener proporción entre tarjetas */
+   position: relative; /* Necesario para posicionar elementos hijos de forma absoluta */
+   border-radius: var(--border-radius); /* Bordes redondeados según variable global */
+   overflow: hidden; /* Oculta contenido que se salga del contenedor (ej: imágenes) */
+   box-shadow: var(--shadow); /* Sombra para dar efecto de tarjeta elevada */
+   transition: transform 0.3s; /* Animación suave al escalar o mover */
+   height: 250px; /* Alto fijo para uniformidad de tarjetas */
+
 }
 
 .categories__card:hover { /* Hover tarjeta */
@@ -222,15 +231,23 @@
 .footer__container { /* Contenedor interno */
     max-width: 900px; /* Máximo ancho */
     margin: 0 auto; /* Centrado horizontal */
+     max-width: 900px;
+    margin: 0 auto;
+
+    /* Cambio: uso Flexbox para centrar y distribuir enlaces y texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .footer__text { /* Texto de derechos */
-    margin-bottom: 15px; /* Espacio abajo */
     font-size: 1rem; /* Tamaño base */
 }
 
 .footer__links { /* Contenedor de enlaces */
-    margin-bottom: 5px; /* Espacio abajo */
+     display: flex;
+     gap: 20px;
 }
 
 .footer__link { /* Enlace del footer */
