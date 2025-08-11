@@ -25,9 +25,8 @@
     height: 80px; /* Altura del header */
     min-width: 320px; /* Ancho mínimo */
     position: fixed; /* Fijo arriba */
-    border: 1px solid black; /* Borde negro */
     width: 100%; /* Ocupa todo el ancho */
-    border-radius: var(--border-radius); /* Bordes redondeados */
+    
 
         /* NUEVO: Flexbox para alinear logo y navegación */
     display: flex; /* Activamos flexbox */
